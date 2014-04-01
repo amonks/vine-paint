@@ -80,7 +80,7 @@ void draw() {
     if (mov.available() || abs(mov.time() - mov.duration()) > 0.01) {
       mov.read();
      // if ( mousePressed == true && (mouseY > 20 || mouseX > 100 ) ) {
-        image(mov,noise(noisePos) * displayWidth, noise(noisePos + noisePad) * displayHeight, brushWidth, brushWidth);
+        image(mov,noise(noisePos) * displayWidth  - brushWidth / 2, noise(noisePos + noisePad) * displayHeight - brushWidth / 2, brushWidth, brushWidth);
      // }
     }
     else
